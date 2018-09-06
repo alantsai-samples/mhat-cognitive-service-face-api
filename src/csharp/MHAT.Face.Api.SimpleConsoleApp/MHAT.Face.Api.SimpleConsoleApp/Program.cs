@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.ProjectOxford.Face;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,10 @@ namespace MHAT.Face.Api.SimpleConsoleApp
     {
         static void Main(string[] args)
         {
+            var subscriptionKey = "";
+            var enpointUrl = "https://eastasia.api.cognitive.microsoft.com/face/v1.0";
+
+            var client = new FaceServiceClient(subscriptionKey, enpointUrl);
         }
     }
 }
