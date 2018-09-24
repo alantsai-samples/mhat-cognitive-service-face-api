@@ -27,7 +27,7 @@ namespace MHAT.Face.Api.SimpleConsoleApp
             foreach (var item in faces)
             {
                 Console.WriteLine($"\t 人物：{item.FaceId} \t 開心程度：{item.FaceAttributes.Emotion.Happiness} " +
-                    $"\t 年齡：{item.FaceAttributes.Age} \t 性別：{item.FaceAttributes.Age}");
+                    $"\t 年齡：{item.FaceAttributes.Age} \t 性別：{item.FaceAttributes.Gender}");
             }
 
             Console.ReadLine();
