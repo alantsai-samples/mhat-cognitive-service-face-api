@@ -30,6 +30,22 @@ namespace MHAT.Face.Api.SimpleConsoleApp
                     $"\t 年齡：{item.FaceAttributes.Age} \t 性別：{item.FaceAttributes.Gender}");
             }
 
+            var imageUrl2 = "https://raw.githubusercontent.com/Microsoft/" +
+                "Cognitive-Face-Windows/master/Data/" +
+                "PersonGroup/Family2-Lady/Family2-Lady2.jpg";
+
+            var faces2 = await client.DetectAsync(imageUrl2, returnFaceAttributes: faceAttr);
+
+            Console.WriteLine($"這張圖片2有以下幾個人臉被識別出來：");
+
+            foreach (var item in faces2)
+            {
+                Console.WriteLine($"\t 人物：{item.FaceId} " +
+                    $"\t 開心程度：{item.FaceAttributes.Emotion.Happiness} " +
+                    $"\t 年齡：{item.FaceAttributes.Age} " +
+                    $"\t 性別：{item.FaceAttributes.Gender}");
+            }
+
             Console.ReadLine();
         }
     }
