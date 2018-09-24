@@ -48,6 +48,10 @@ namespace MHAT.Face.Api.SimpleConsoleApp
 
             var verifyResult = await client.VerifyAsync(faces.First().FaceId, faces2.First().FaceId);
 
+            Console.WriteLine($"2張圖片的第一個人臉識別結果為：{Environment.NewLine} " +
+                $"\n 是否同一人：{verifyResult.IsIdentical} {Environment.NewLine} " +
+                $"\n 信心指數：{verifyResult.Confidence}");
+
             Console.ReadLine();
         }
     }
