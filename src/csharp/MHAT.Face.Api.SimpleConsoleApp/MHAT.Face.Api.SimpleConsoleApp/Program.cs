@@ -46,6 +46,8 @@ namespace MHAT.Face.Api.SimpleConsoleApp
                     $"\t 性別：{item.FaceAttributes.Gender}");
             }
 
+            var verifyResult = await client.VerifyAsync(faces.First().FaceId, faces2.First().FaceId);
+
             Console.ReadLine();
         }
     }
